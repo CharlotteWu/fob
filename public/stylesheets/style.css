@@ -1,0 +1,571 @@
+@font-face {
+    font-family: 'pathway_gothic_oneregular';
+    src: url('../fonts/pathway_gothic_oneregular/PathwayGothicOne-Regular-webfont.eot');
+    src: url('../fonts/pathway_gothic_oneregular/PathwayGothicOne-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pathway_gothic_oneregular/PathwayGothicOne-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/pathway_gothic_oneregular/PathwayGothicOne-Regular-webfont.woff') format('woff'),
+         url('../fonts/pathway_gothic_oneregular/PathwayGothicOne-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/pathway_gothic_oneregular/PathwayGothicOne-Regular-webfont.svg#pathway_gothic_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'ralewaythin';
+    src: url('../fonts/ralewaythin/Raleway-Thin-webfont.eot');
+    src: url('../fonts/ralewaythin/Raleway-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ralewaythin/Raleway-Thin-webfont.woff2') format('woff2'),
+         url('../fonts/ralewaythin/Raleway-Thin-webfont.woff') format('woff'),
+         url('../fonts/ralewaythin/Raleway-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/ralewaythin/Raleway-Thin-webfont.svg#ralewaythin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@charset "utf-8";
+/* 使用重置样式表 */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
+var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;    
+}
+body{
+    line-height:1; 
+    width: 100%;
+    height: 100%;   
+}
+ol,ul{
+    list-style:none;
+}
+blockquote, q{
+    quotes:none;
+}
+blockquote:before, blockquote:after, q:before, q:after{
+    content: '';
+    content:none;
+}
+
+
+.box{ 
+    font-family: 'ralewaythin';
+}
+
+.sidebar{
+	position: fixed;
+	left:  -200px;
+	height: 100%;
+	width: 255px;  
+	background: #1F1919; 
+	z-index: 9999; 
+}
+ 
+.menu-list{
+	color: #ffffff;
+	width: 150px;
+	margin: 0 auto;
+}
+
+.menu-list ul{ 
+	padding-top: 20px;
+}
+
+.menu-list ul li{
+	line-height: 30px;
+	font-size: 20px;
+}
+
+.menu-list ul a{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.footer{
+   color: #ffffff;
+   padding-top: 40px;	
+}
+
+.footer p{
+	line-height: 20px;
+	text-align: center;
+	font-size: 10px;
+}
+
+.clear{
+	clear: both;
+}
+
+.show { 
+	position: absolute;
+	width: 28px;  
+	height: 47px; 
+	top: 45%;
+	left:  210px; 
+	background-image: url('../images/right-angel.png');
+    transition:.2s ease-out;
+    -moz-transition:.2s ease-out;
+    -ms-transition:.2s ease-out;
+    -webkit-transition:.2s ease-out;
+    cursor: pointer;
+}
+
+.close{ 
+    transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+}
+
+.content{
+	position: absolute; 
+	left: 55px;
+    top: 0px;  
+    bottom: 0px;
+    right: 0px;
+    background-color: #000000 ;
+}
+
+.content1{
+	position: relative; 
+	min-height: 100%;
+    background-color: #000000 ;
+    margin-left: 55px;
+
+}
+
+.roll-background{
+	position: absolute; 
+    width: 100%;
+	height: 100%; 
+}
+ 
+.roll-pic{
+	 position: absolute; 
+     width: 100%;
+	 height: 100%; 
+}
+
+.roll-pic img{ 
+	position: absolute;  
+	width: 100%;
+	height: 100%; 
+}
+
+#pic1{ 
+	background-image: url('../images/roll1.jpg'); 
+}
+#pic2{ 
+	background-image: url('../images/roll2.jpg'); 
+}
+#pic3{ 
+	background-image: url('../images/roll3.jpg'); 
+}
+
+.site-name{
+    position: absolute;
+    top: 23px;
+    left: 50px;
+    font-size: 80px;
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+	color: #000000;
+	font-family: 'pathway_gothic_oneregular';
+	z-index: 999;
+}
+
+.team img{ 
+	height: 100%; 
+	width: 100%;  
+}
+
+.introduce{ 
+  position: relative; 
+
+} 
+.introduce p{
+	color: #ffffff; 
+	line-height: 25px;
+}
+
+.introduce p span{
+	font-size: 25px;
+}
+
+.team-member{
+  margin-top: 50px;
+  width: 97.5%;
+  height: 400px;
+  padding-left: 2.5%;
+}
+
+.pete,.patrick,.andy,.joe{
+	width: 25%; 
+}
+
+.pete img,.patrick img,.andy img,.joe img{
+	width: 80%;
+	height: 80%;
+}
+
+.pete,.patrick,.andy,.joe{  
+	position: absolute; 
+}
+
+.pete{
+	left: 0;
+}
+
+.patrick{
+	left: 25%;
+}
+
+.joe{
+	left: 50%;
+}
+
+.andy{
+	left: 75%;
+}
+
+ 
+.p-pic img{
+  border: 5px solid #CA2129;
+  border-radius: 5px;  
+}
+
+.p-intro{
+	position: absolute; 
+	display: block;  
+	left: 100%;
+	width: 100%;
+	height: 390px;
+	background-color: #CA2129;  
+	left: 100%; 
+	z-index: 100;
+}
+
+.p-intro h1{
+	font-size: 45px;
+	padding: 10px 0 5px 5px;
+	border-bottom: 2px solid #000000 ;
+	width: 80%;
+	color: #000000;
+}
+
+.p-intro p{
+	padding-top: 10px;
+	line-height: 20px;
+}
+
+/*Music*/
+.gramophone{  
+   width: 500px;
+   height: 500px;
+   background: #F8F4EE;
+   margin: 0 auto;
+   margin-top: 20px;
+   border-radius: 15px;
+   box-shadow: 0px 0px 5px #aaaaaa inset; 
+}
+
+.spin{
+	position: relative;
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 15px #aaaaaa; 
+	border: 0;
+	margin:0 auto;
+	margin-top: 20px;
+}
+
+.plate{
+	position: absolute;
+	left: 150px;
+	top: 150px;
+	width: 50px;
+	height: 50px;
+	background: #534B45;
+	border-radius: 50%;  
+}
+
+.cd{ 
+	position: absolute;
+	left: 8px;
+	top:8px;
+	width: 330px;
+	height: 330px;
+	border: 2px solid #C2C0BD;
+	border-radius: 50%;
+	/*animation: spinnig 4s infinite linear;
+	-webkit-animation: spinnig 4s infinite linear;*/
+}
+
+.point{
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   left: 20px;
+   top: 20px;
+   background: linear-gradient(top, #F3F3F3, #8F8F8E);
+   background: -webkit-linear-gradient(top, #F3F3F3, #8F8F8E);
+   background: -moz-linear-gradient(top, #F3F3F3, #8F8F8E);
+   background: -ms-linear-gradient(top, #F3F3F3, #8F8F8E); 
+}
+
+.bth{ 
+   height: 50px; 
+   margin-top: 5px;
+}
+
+.btn-style{
+	width: 50px;
+	height: 50px;
+	background: #F3F3F3;
+	box-shadow:  0px 10px  15px #aaaaaa;
+	border-radius: 50%;
+	display: block;
+}
+
+.list{ 
+	float: left;
+	margin-left: 10%;
+	background: url("../images/list.png") center no-repeat;
+}
+
+.random{
+	float: right;
+	margin-right: 10%;
+	background: url("../images/random.png") center no-repeat;
+}
+
+.basic-bth{
+	position: relative; 
+	width: 100%;
+	height: 60px; 
+	margin-top: 24px;
+	background: #F6F0E8;
+}
+
+.pre,.play,.next{
+	width: 33%;
+	height: 60px;  
+	float: left;
+}
+.play,.next{
+    border-left: 1px solid #aaaaaa;
+}
+
+.play{ 
+	background: url("../images/play.png") center no-repeat;
+}
+
+.pre{
+    background: url("../images/pre.png") center no-repeat;
+}
+
+.next{
+   background: url("../images/next.png") center no-repeat;
+}
+
+.tonearm{
+	position: relative;
+	float: right; 
+	margin-right: 12%;
+	margin-top: 3%;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-shadow: 0px 6px 15px #aaaaaa; 
+	z-index: 10;
+}
+
+.connect{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	box-shadow: 0px 6px 25px #aaaaaa; 
+	margin-left: 10px;
+	margin-top: 10px; 
+}
+
+.tonearm-body{
+	position: relative;
+	margin-top: -25px;
+	margin-left: 15px; 
+	width: 15px;
+	height: 140px; 
+	box-shadow: 5px 5px 15px #aaaaaa; 
+	background: #F6F0E8;
+	transform:rotate(18deg);
+	-webkit-transform:rotate(18deg);
+	-moz-transform:rotate(18deg);
+	-ms-transform:rotate(18deg);
+    transform-origin:60% 0;
+	-webkit-transform-origin:100% 10%;
+    -moz-transform-origin:100% 10% ;
+	-ms-transform-origin:100% 10%;  
+	transition: .2s ease-out;
+	-webkit-transition: .2s ease-out;
+}
+
+.tonearm-body:hover{ 
+	transform:rotate(-18deg);
+	-webkit-transform:rotate(-18deg);
+	-moz-transform:rotate(-18deg);
+	-ms-transform:rotate(-18deg); 
+}
+
+.tonearm-head{
+   position: absolute;
+   top: 130px;
+   left: -10px;
+   width: 15px;
+   height: 50px;
+   background: #F6F0E8; 
+   transform:rotate(30deg);
+   -webkit-transform:rotate(30deg);
+   -moz-transform:rotate(30deg);
+   -ms-transform:rotate(30deg); 
+   border-radius: 10px 10px 5px 5px ;
+   box-shadow: 10px 1px 15px #707070; 
+}
+
+.tonearm-head-hat{
+	position: absolute;
+	top:10px;
+	width: 20px;
+	height: 30px;
+    background: #F6F0E8; 
+    border-radius: 5px; 
+}
+
+@keyframes spinnig{
+	0%{
+		transform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(180deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spinnig{
+	0%{
+		transform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(180deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+
+/*dz*/
+
+.dz{
+	width: 800px;
+	margin:0 auto;
+	color: #ffffff; 
+}
+
+.dz h1{
+    font-size: 35px;
+}
+
+.text-zone textarea{
+	background: #000000;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	font-family: 'ralewaythin';
+}
+
+.discussed-list{
+	margin-top: 50px;
+}
+
+.discussed-list h2{
+	border-bottom: 1px solid #ffffff;
+	line-height: 40px;
+	font-size: 25px;
+}
+
+.comment{
+	width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.person{
+	width: 20%;
+	height: 100%;
+	float: left;
+	margin: 0 auto;
+}
+
+.name{
+  margin-top: 5px;
+}
+
+.photo{
+	width: 20%;
+	height: 80px;
+}
+
+.photo img{ 
+	height: 100%;
+}
+
+.thought{
+	position: relative;
+}
+
+/*About*/
+.thank{
+   width: 500px;
+   height: 100%;
+   background-size: cover;
+   background-image: url('../images/about.png');
+}
+.about{
+	 position: absolute;
+	 left: 550px;
+	 top: 50px; 
+}
+
+.about p,h1,a{
+	 color: #ffffff;
+	 font-size: 25px;
+	 line-height: 40px;   
+	 text-decoration: none;
+}
+
+.about h1{
+	font-size: 35px;
+	margin-top:20px; 
+}
+
+.bg-icon{
+	background: url('../images/btn.png') no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#icon1{
+	width: 31px;
+	height: 32px;
+	background-position: 0 30px ;
+}
