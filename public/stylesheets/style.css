@@ -69,8 +69,8 @@ blockquote:before, blockquote:after, q:before, q:after{
  
 .menu-list{
 	color: #ffffff;
-	width: 150px;
-	margin: 0 auto;
+	width: 150px; 
+	margin-left: 40px;
 }
 
 .menu-list ul{ 
@@ -306,8 +306,8 @@ blockquote:before, blockquote:after, q:before, q:after{
 	height: 330px;
 	border: 2px solid #C2C0BD;
 	border-radius: 50%;
-	/*animation: spinnig 4s infinite linear;
-	-webkit-animation: spinnig 4s infinite linear;*/
+	animation: spinnig 20s infinite linear;
+	-webkit-animation: spinnig 20s infinite linear;
 }
 
 .point{
@@ -423,7 +423,7 @@ blockquote:before, blockquote:after, q:before, q:after{
 	transform:rotate(-18deg);
 	-webkit-transform:rotate(-18deg);
 	-moz-transform:rotate(-18deg);
-	-ms-transform:rotate(-18deg); 
+	-ms-transform:rotate(-18deg);  
 }
 
 .tonearm-head{
@@ -493,6 +493,23 @@ blockquote:before, blockquote:after, q:before, q:after{
 	font-family: 'ralewaythin';
 }
 
+.submit{
+	float: right;
+	margin-right: 175px;
+	background: #000000;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	color: #ffffff;
+	padding: 10px 20px;
+	transition: .2s linear;
+	cursor: pointer;
+}
+
+.submit:hover{
+	color: #000000;
+	background-color: #ffffff;
+}
+ 
 .discussed-list{
 	margin-top: 50px;
 }
@@ -531,6 +548,15 @@ blockquote:before, blockquote:after, q:before, q:after{
 
 .thought{
 	position: relative;
+	padding-top: 40px;
+}
+
+.page{
+	margin-left: 42%;
+}
+ 
+.next-page{
+	margin-left: 25px;
 }
 
 /*About*/

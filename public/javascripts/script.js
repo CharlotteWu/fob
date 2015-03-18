@@ -1,5 +1,8 @@
  $(document).ready(function(){
     var timer = null;
+     
+    //check the screen's size 
+ 
 
     //roll pics  
 	$('#rb div').css({opacity: 0.0});
