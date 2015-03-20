@@ -140,7 +140,7 @@ blockquote:before, blockquote:after, q:before, q:after{
 
 }
 
-.roll-background{
+.roll-background {
 	position: absolute; 
     width: 100%;
 	height: 100%; 
@@ -155,17 +155,20 @@ blockquote:before, blockquote:after, q:before, q:after{
 .roll-pic img{ 
 	position: absolute;  
 	width: 100%;
-	height: 100%; 
+	height: 100%;  
 }
 
 #pic1{ 
-	background-image: url('../images/roll1.jpg'); 
+	background-image: url('../images/roll1.jpg');  
+	background-size: cover;
 }
 #pic2{ 
-	background-image: url('../images/roll2.jpg'); 
+	background-image: url('../images/roll2.jpg');  
+	background-size: cover; 
 }
 #pic3{ 
-	background-image: url('../images/roll3.jpg'); 
+	background-image: url('../images/roll3.jpg');  
+	background-size: cover; 
 }
 
 .site-name{
@@ -182,6 +185,8 @@ blockquote:before, blockquote:after, q:before, q:after{
 	z-index: 999;
 }
 
+
+/*introduce*/
 .team img{ 
 	height: 100%; 
 	width: 100%;  
@@ -221,15 +226,15 @@ blockquote:before, blockquote:after, q:before, q:after{
 }
 
 .pete{
-	left: 0;
+	left: 1%;
 }
 
 .patrick{
-	left: 25%;
+	left: 26%;
 }
 
 .joe{
-	left: 50%;
+	left: 51%;
 }
 
 .andy{
@@ -237,20 +242,33 @@ blockquote:before, blockquote:after, q:before, q:after{
 }
 
  
-.p-pic img{
+.p_pic img{
   border: 5px solid #CA2129;
   border-radius: 5px;  
 }
 
+.self_intro{
+	position: fixed; 
+	z-index: 501;
+	display: block;
+	background-color: #CA2129;
+	width: 900px;
+	height : 400px; 
+	left: 0;
+	top: 0; 
+	display: none;
+}
+
 .p-intro{
-	position: absolute; 
-	display: block;  
-	left: 100%;
-	width: 100%;
-	height: 390px;
-	background-color: #CA2129;  
-	left: 100%; 
-	z-index: 100;
+	float: right;
+	width: 600px;
+	padding: 5px;
+}
+
+.pic{
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .p-intro h1{
@@ -264,6 +282,24 @@ blockquote:before, blockquote:after, q:before, q:after{
 .p-intro p{
 	padding-top: 10px;
 	line-height: 20px;
+}
+
+.close{
+	float: right;
+}
+
+.mask{
+	background: #000000;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 500; 
+	display: none;
+}
+
+.close{
+	cursor: pointer;
 }
 
 /*Music*/
@@ -306,8 +342,8 @@ blockquote:before, blockquote:after, q:before, q:after{
 	height: 330px;
 	border: 2px solid #C2C0BD;
 	border-radius: 50%;
-	animation: spinnig 20s infinite linear;
-	-webkit-animation: spinnig 20s infinite linear;
+	/*nimation: spinnig 20s infinite linear;
+	-webkit-animation: spinnig 20s infinite linear;*/
 }
 
 .point{
@@ -357,21 +393,30 @@ blockquote:before, blockquote:after, q:before, q:after{
 	background: #F6F0E8;
 }
 
-.pre,.play,.next{
-	width: 33%;
+.pre,.before,.stop,.after,.next{
+	width: 19.8%;
 	height: 60px;  
 	float: left;
+	cursor: pointer;
 }
-.play,.next{
+.before,.stop,.after,.next{
     border-left: 1px solid #aaaaaa;
 }
 
-.play{ 
-	background: url("../images/play.png") center no-repeat;
+.pre{ 
+	background: url("../images/pre.png") center no-repeat;
 }
 
-.pre{
-    background: url("../images/pre.png") center no-repeat;
+.before{
+    background: url("../images/before.png") center no-repeat;
+}
+
+.stop{
+    background: url("../images/stop.png") center no-repeat;
+}
+
+.after{
+    background: url("../images/after.png") center no-repeat;
 }
 
 .next{
@@ -476,7 +521,7 @@ blockquote:before, blockquote:after, q:before, q:after{
 
 /*dz*/
 
-.dz{
+.dz,.new-area{
 	width: 800px;
 	margin:0 auto;
 	color: #ffffff; 
@@ -551,12 +596,65 @@ blockquote:before, blockquote:after, q:before, q:after{
 	padding-top: 40px;
 }
 
-.page{
-	margin-left: 42%;
+.page{ 
+	padding-top: 5%;
+	padding-left: 35%;
 }
- 
+
+.previous,.next-page{
+	transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out; 
+}
+
+.previous:hover{
+	background-position: -15px; 
+}
+
 .next-page{
-	margin-left: 25px;
+	margin-left: 25px; 
+}
+
+.next-page:hover{
+	background-position: 15px;
+}
+
+/*news*/
+
+.new-list{
+	margin-top: 20px;
+}
+
+.new{
+	width: 800px;
+	height: 150px;
+	background-color: rgba(133,127,127,0.3); 
+	margin-top: 40px;
+}
+
+.new-pic{
+	float: left;
+   width: 100px;
+   height: 100px;
+   margin-left: 20px;
+   margin-top: 20px;
+}
+
+.new-pic img{
+   width: 100%;
+   height: 100%;
+}
+
+.new-content{
+	float: right;
+	width: 650px; 
+	margin-top: 20px;
+}
+
+.more{
+	float: right;
+	margin-right: 20px;
 }
 
 /*About*/
