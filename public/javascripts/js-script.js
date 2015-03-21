@@ -30,8 +30,12 @@ window.onload= function(){
      	}
      }
 
+ 
+   //change music 
+    var cd = document.getElementsByClassName('cd');
+    for(var i=0;i<cd.length;i++){
+      cd[i].id = i;
+    }
 
-   ////hover a pic 
-
-
+   
 }

@@ -50,9 +50,35 @@
      }
      
 
-     //change the cds
-     
+     //change the cds 
+      $('.pre').on('click',function(){  
+           $('.cd').removeClass('cd_animation');  
+           var  mlValue = parseInt($('.cd_l').css("margin-left"))+parseInt($(document.body).innerWidth())-55 +'px'; 
+         if($('cd_list').hasClass('active')){
+             $('.cd_list .cd_l').animate({marginLeft:mlValue}); 
+         }else{
+             $('.cd_list .cd_l').animate({marginLeft:mlValue});
+             $('.cd_list .cd_l').css({marginLeft:mlValue});
+             $('.cd').addClass('active');  
+              
+         } 
+      });
+ 
 
+       $('.next').on('click',function(){ 
+         $('.cd').removeClass('cd_animation');  
+          var  mlValue = parseInt($('.cd_l').css("margin-left"))-parseInt($(document.body).innerWidth())+55 +'px'; 
+         if($('cd_l').hasClass('active')){
+             $('.cd_list .cd_l').animate({marginLeft:mlValue}); 
+         }else{
+             $('.cd_list .cd_l').animate({marginLeft:mlValue});
+             $('.cd_list .cd_l').css({marginLeft:mlValue});
+             $('.cd').addClass('active');  
+         }  
+         
+       
 
+         
+      });
   })
     
