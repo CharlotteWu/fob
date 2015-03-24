@@ -305,6 +305,7 @@ blockquote:before, blockquote:after, q:before, q:after{
 
 /*Music*/
 .gramophone{  
+position: relative;
    width: 500px;
    height: 500px;
    background: #F8F4EE;
@@ -337,25 +338,28 @@ blockquote:before, blockquote:after, q:before, q:after{
 
 .cd_list{ 
 	position: absolute;
-	left: 37.5%;
+	left: 37.3%;
 	top:30px; 
 	width: 100%;
-	height: 330px;
-	z-index: 80;    
+	height: 330px;  
+	z-index: 80;
 }
 
  
 .cd_l{ 
+	position: relative;
 	height: 330px;
 	width: 500%;  
 }
 
 .cd{ 
+	position: relative;
 	float: left;
 	width: 20%;   
 }
 
-.cd_size{ 
+.cd_size{  
+	position: relative;
 	width: 330px;
 	height: 330px;
 	animation: spinnig 20s infinite linear;
@@ -688,7 +692,7 @@ blockquote:before, blockquote:after, q:before, q:after{
 
 .about p,h1,a{
 	 color: #ffffff;
-	 font-size: 25px;
+	 font-size: 20px;
 	 line-height: 40px;   
 	 text-decoration: none;
 }
